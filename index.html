@@ -3,56 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming - Index</title>
+    <title>JavaScript Examples</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        pre {
             background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            background-color: #3498db;
-            padding: 1em;
-            color: #ecf0f1;
-        }
-
-        main {
-            padding: 2em;
-        }
-
-        footer {
-            background-color: #3498db;
-            padding: 1em;
-            color: #ecf0f1;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the World of Programming</h1>
-    </header>
+    <h1>JavaScript Examples</h1>
 
-    <main>
-        <p>
-            Programming is an exciting world of possibilities where only your imagination is the limit.
-            Learn new technologies, enhance your skills, and create innovative solutions!
-        </p>
-        <p>
-            On this page, you'll find useful materials, tips, and resources for learning and practicing programming.
-        </p>
-    </main>
+    <h2>Example 1: Hello, World!</h2>
+    <pre>
+        <code>
+            console.log("Hello, World!");
+        </code>
+    </pre>
 
-    <footer>
-        <p>Created with a passion for coding</p>
-    </footer>
+    <h2>Example 2: Alert Box</h2>
+    <pre>
+        <code>
+            alert("This is an alert!");
+        </code>
+    </pre>
+
+    <h2>Example 3: Variable and Console Output</h2>
+    <pre>
+        <code>
+            var message = "Hello, JavaScript!";
+            console.log(message);
+        </code>
+    </pre>
+
+    <h2>Example 4: DOM Manipulation</h2>
+    <pre>
+        <code>
+            document.getElementById('output').innerHTML = "DOM Manipulation Example";
+        </code>
+    </pre>
+    <div id="output"></div>
+
+    <h2>Example 5: Event Handling</h2>
+    <button id="myButton">Click me!</button>
+    <pre>
+        <code>
+            document.getElementById('myButton').addEventListener('click', function() {
+                alert('Button Clicked!');
+            });
+        </code>
+    </pre>
+
+    <!-- Add more examples as needed -->
+
+    <script>
+        // JavaScript code can be placed here or in an external script file
+    </script>
 </body>
 </html>
-Hello World!
-
