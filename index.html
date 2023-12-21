@@ -50,20 +50,18 @@
     </style>
 </head>
 <body>
-    <h1>Yin Yang Color Changer</h1>
+    <h1>Color Generator</h1>
 
     <div id="yin-yang"></div>
 
     <button onclick="changeColor()">Change Color</button>
+    <h2 id="col">Color Generator</h2>
 
     <script>
         function changeColor() {
             var yinYang = document.getElementById('yin-yang');
-
-            // Generate a random color
             var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-            // Apply the random color to the yin-yang element
+            document.getElementById("col").innerText = randomColour
             yinYang.style.background = randomColor;
         }
     </script>
