@@ -3,70 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yin Yang Color Changer</title>
+    <title>Wellcome</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-
-        #yin-yang {
-            width: 200px;
-            height: 200px;
-            border: 2px solid #000;
-            border-radius: 50%;
-            position: relative;
-            background: #fff;
-            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
+            background-color: #f7f7f7;
         }
-
-        #yin-yang:before,
-        #yin-yang:after {
-            content: '';
-            width: 0%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            background: #000;
-            border-radius: 50%;
+        
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
         }
-
-        #yin-yang:before {
+        
+        #menu-sidebar {
+            position: fixed;
             left: 0;
+            top: 120px;
+            height: 100%;
+            width: 350px; /* Initial width matching the toggle logic */
+            background-color: #2c3e50;
+            padding-top: 20px;
+            overflow-x: hidden;
+            transition: 0.5s;
         }
-
-        #yin-yang:after {
-            left: 50%;
+        
+        #menu-sidebar a {
+            padding: 5px 20px; /* Adjusted padding for better appearance */
+            text-decoration: none;
+            font-size: 18px;
+            color: #ecf0f1;
+            display: block;
+            transition: 0.3s;
         }
-
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
+        
+        #menu-sidebar a:hover {
+            background-color: #34495e;
+        }
+        
+        #main-content {
+            margin-left: 350px; /* Adjusted margin to match the toggle logic */
+            padding: 25px; /* Added 'px' unit for padding */
+            transition: margin-left 1.5s;
+        }
+        
+        #menu-btn {
+            font-size: 30px;
+            font-weight: bold;
             cursor: pointer;
+            position: fixed;
+            left: 10px;
+            top: 40px;
+            color: #ecf0f1;
+            z-index: 1;
+        }
+        
+        #menu-btn:hover {
+            color: #3498db;
         }
     </style>
 </head>
 <body>
-    <h1>Yin Yang Color Changer</h1>
+    <header>
+        <h1>MyVisualStudio.c</h1>
+    </header>
 
-    <div id="yin-yang"></div>
-    <div id="col"></div>
+    <div id="menu-btn">	&#8744; explorer</div>
 
-    <button onclick="changeColor()">Change Color</button>
+    <div id="menu-sidebar">
+        <a href="tools.html">2 #include &lt;stdlibrary.h&gt;;</a>
+        <a href="tools.html">1 #include "my_tools";</a>
+        <a href="#">3 int main(){</a>
+        <a href="#">4 &emsp; char *temp;</a>
+        <a href="#">5 &emsp; return 0;}</a>
+        <!-- <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a> -->
+    </div>
+
+    <div id="main-content">
+        <h2>Main Content Goes Here</h2>
+        <p>This is your beautiful welcome page. Customize it to suit your needs.</p>
+    </div>
 
     <script>
-        function changeColor() {
-            var yinYang = document.getElementById('yin-yang');
+        // Open the menu sidebar by default when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidebar = document.getElementById('menu-sidebar');
+            var mainContent = document.getElementById('main-content');
+            sidebar.style.width = '0px';
+            mainContent.style.marginLeft = '10px';
+        });
 
-            // Generate a random color
-            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-            document.getElementById("col").innerText = randomColor;
-            // Apply the random color to the yin-yang element
-            yinYang.style.background = randomColor;
-        }
+        // Toggle the menu sidebar when the menu button is clicked
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            var sidebar = document.getElementById('menu-sidebar');
+            var mainContent = document.getElementById('main-content');
+            if (sidebar.style.width === '350px') {
+                sidebar.style.width = '0';
+                mainContent.style.marginLeft = '300px';
+            } else {
+                sidebar.style.width = '350px';
+                mainContent.style.marginLeft = '350px';
+            }
+        });
     </script>
 </body>
 </html>
