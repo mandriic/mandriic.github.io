@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer</title>
+    <title>Yin Yang Color Changer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
             border: 2px solid #000;
             border-radius: 50%;
             position: relative;
-            /*background: #fff;-->*/
+            background: #fff;
             display: inline-block;
             overflow: hidden;
         }
@@ -50,21 +50,23 @@
     </style>
 </head>
 <body>
-    <h1>Color Generator</h1>
+    <h1>Yin Yang Color Changer</h1>
 
-
-    <button onclick="changeColor()">Change Color</button>
     <div id="yin-yang"></div>
     <div id="col"></div>
+
+    <button onclick="changeColor()">Change Color</button>
 
     <script>
         function changeColor() {
             var yinYang = document.getElementById('yin-yang');
+
+            // Generate a random color
             var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-            document.getElementById("col").innerText = randomColour
+            document.getElementById("col").innerText = randomColor;
+            // Apply the random color to the yin-yang element
             yinYang.style.background = randomColor;
         }
     </script>
 </body>
 </html>
-
