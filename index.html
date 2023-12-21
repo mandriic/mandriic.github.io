@@ -3,71 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Examples</title>
+    <title>Yin Yang Color Changer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            text-align: center;
+            margin: 50px;
         }
 
-        h2 {
-            margin-bottom: 10px;
+        #yin-yang {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            position: relative;
+            background: #fff;
+            display: inline-block;
+            overflow: hidden;
         }
 
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            overflow-x: auto;
+        #yin-yang:before,
+        #yin-yang:after {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        #yin-yang:before {
+            left: 0;
+        }
+
+        #yin-yang:after {
+            left: 50%;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>JavaScript Examples</h1>
+    <h1>Yin Yang Color Changer</h1>
 
-    <h2>Example 1: Hello, World!</h2>
-    <pre>
-        <code>
-            console.log("Hello, World!");
-        </code>
-    </pre>
+    <div id="yin-yang"></div>
 
-    <h2>Example 2: Alert Box</h2>
-    <pre>
-        <code>
-            alert("This is an alert!");
-        </code>
-    </pre>
-
-    <h2>Example 3: Variable and Console Output</h2>
-    <pre>
-        <code>
-            var message = "Hello, JavaScript!";
-            console.log(message);
-        </code>
-    </pre>
-
-    <h2>Example 4: DOM Manipulation</h2>
-    <pre>
-        <code>
-            document.getElementById('output').innerHTML = "DOM Manipulation Example";
-        </code>
-    </pre>
-    <div id="output"></div>
-
-    <h2>Example 5: Event Handling</h2>
-    <button id="myButton">Click me!</button>
-    <pre>
-        <code>
-            document.getElementById('myButton').addEventListener('click', function() {
-                alert('Button Clicked!');
-            });
-        </code>
-    </pre>
-
-    <!-- Add more examples as needed -->
+    <button onclick="changeColor()">Change Color</button>
 
     <script>
-        // JavaScript code can be placed here or in an external script file
+        function changeColor() {
+            var yinYang = document.getElementById('yin-yang');
+
+            // Generate a random color
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+            // Apply the random color to the yin-yang element
+            yinYang.style.background = randomColor;
+        }
     </script>
 </body>
 </html>
+
