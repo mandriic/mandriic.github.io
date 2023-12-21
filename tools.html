@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yin Yang Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #yin-yang {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            position: relative;
+            background: #fff;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #yin-yang:before,
+        #yin-yang:after {
+            content: '';
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        #yin-yang:before {
+            left: 0;
+        }
+
+        #yin-yang:after {
+            left: 50%;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yin Yang Color Changer</h1>
+    <div id="yin-yang"></div>
+    <div id="col"></div>
+
+    <a href="index.html"><button>Back</button></a>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor() {
+            var yinYang = document.getElementById('yin-yang');
+
+            // Generate a random color
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById("col").innerText = randomColor;
+            // Apply the random color to the yin-yang element
+            yinYang.style.background = randomColor;
+        }
+    </script>
+</body>
+</html>
