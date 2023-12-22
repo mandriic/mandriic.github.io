@@ -12,9 +12,21 @@ document.getElementById('menu-btn').addEventListener('click', function() {
     var mainContent = document.getElementById('main-content');
     if (sidebar.style.width === '350px') {
         sidebar.style.width = '0';
-        mainContent.style.marginLeft = '300px';
+        mainContent.style.marginLeft = '0px';
     } else {
         sidebar.style.width = '350px';
         mainContent.style.marginLeft = '350px';
     }
 });
+
+document.getElementById('main').addEventListener('click', function() {
+    var mainContent = document.getElementById('main_iframe');
+        mainContent.src = 'main.html';
+    }
+);
+
+document.getElementById('tools').addEventListener('click', function() {
+    var mainContent = document.getElementById('main_iframe');
+        mainContent.src = 'tools.html';
+    }
+);
