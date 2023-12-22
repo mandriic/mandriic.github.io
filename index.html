@@ -1,117 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">   
+<link rel="stylesheet" href="main.css"> 
+            
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcome</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #f7f7f7;
-        }
-        
-        header {
-            background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-color: #333;
-            padding: 20px;
-            color: #fff;
-            text-align: center;
-        }
-        
-        #menu-sidebar {
-            position: fixed;
-            left: 0;
-            top: 120px;
-            height: 100%;
-            width: 350px; /* Initial width matching the toggle logic */
-            background-color: #2c3e50;
-            padding-top: 20px;
-            overflow-x: hidden;
-            transition: 0.5s;
-        }
-        
-        #menu-sidebar a {
-            padding: 5px 20px; /* Adjusted padding for better appearance */
-            text-decoration: none;
-            font-size: 18px;
-            color: #ecf0f1;
-            display: block;
-            transition: 0.3s;
-        }
-        
-        #menu-sidebar a:hover {
-            background-color: #34495e;
-        }
-        
-        #main-content {
-            margin-left: 350px; /* Adjusted margin to match the toggle logic */
-            padding: 25px; /* Added 'px' unit for padding */
-            transition: margin-left 1.5s;
-        }
-        
-        #menu-btn {
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            position: fixed;
-            left: 10px;
-            top: 40px;
-            color: #ecf0f1;
-            z-index: 1;
-        }
-        
-        #menu-btn:hover {
-            color: #3498db;
-        }
-    </style>
+
 </head>
 <body>
     <header>
-        <h1>MyVisualStudio.c</h1>
+        <h1>HelloWorld.c</h1>
     </header>
 
     <div id="menu-btn">	&#8744; explorer</div>
 
     <div id="menu-sidebar">
         <a href="https://www.tutorialspoint.com/c_standard_library/stdlib_h.htm">1 #include &lt;stdlib.h&gt;;</a>
-        <a href="tools.html">2 #include "my_tools";</a>
-        <a href="index.html">3 int main(){</a>
-        <a href="http://github.com">4 &emsp; char *temp;</a>
-        <a href="http://42malaga.com">5 &emsp; return 0;}</a>
-        <!-- <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a> -->
+        <a href="#">2 </a>
+        <a href="index.html">3 int main(void)</a>
+        <a href="#">4 {</a>
+        <a href="about.html">5 &emsp; char *about;</a>
+        <a href="tools.html">6 &emsp; my_tools(void);</a>
+        <a href="http://42malaga.com">7 &emsp; return 0;</a>
+        <a href="#">8 }</a>
     </div>
 
     <div id="main-content">
         <h2>Main Content </h2>
         <p>This is my welcome page..</p>
     </div>
+    <script src="main.js"></script>
 
-    <script>
-        // Open the menu sidebar by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            var sidebar = document.getElementById('menu-sidebar');
-            var mainContent = document.getElementById('main-content');
-            sidebar.style.width = '0px';
-            mainContent.style.marginLeft = '10px';
-        });
-
-        // Toggle the menu sidebar when the menu button is clicked
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            var sidebar = document.getElementById('menu-sidebar');
-            var mainContent = document.getElementById('main-content');
-            if (sidebar.style.width === '350px') {
-                sidebar.style.width = '0';
-                mainContent.style.marginLeft = '300px';
-            } else {
-                sidebar.style.width = '350px';
-                mainContent.style.marginLeft = '350px';
-            }
-        });
-    </script>
 </body>
 </html>

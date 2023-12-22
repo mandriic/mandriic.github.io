@@ -24,18 +24,29 @@
         <a href="tools.html">6 &emsp; my_tools(void);</a>
         <a href="http://42malaga.com">7 &emsp; return 0;</a>
         <a href="#">8 }</a>
-
-        <!-- <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a> -->
     </div>
-
     <div id="main-content">
-        <h2>Tools page </h2>
-        <p>This is TOOLS page..</p>
-        <a href="generator.html">float &emsp; Color generator;</a>
-    </div>
+        <h1>HEX Color generator</h1>
+    
+        <div id="yin-yang"><div id="col"></div></div>
 
-    <script src="main.js"></script>
+        <button onclick="changeColor()">Change Color</button>
+
+    </div>
+        
+    
+        <script>
+            function changeColor() {
+                var yinYang = document.getElementById('yin-yang');
+    
+                // Generate a random color
+                var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                document.getElementById("col").innerText = randomColor;
+                // Apply the random color to the yin-yang element
+                yinYang.style.background = randomColor;
+                col.style.color = invertColor(randomColor)
+            }
+        </script>
+        <script src="main.js"></script>
 </body>
 </html>

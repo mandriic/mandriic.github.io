@@ -1,0 +1,123 @@
+body {
+    font-family: 'Terminal', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+header {
+    background-size: cover;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#menu-sidebar {
+    position: fixed;
+    left: 0;
+    top: 120px;
+    height: 100%;
+    width: 350px; /* Initial width matching the toggle logic */
+    background-color: #2c3e50;
+    padding-top: 20px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#menu-sidebar a {
+    padding: 5px 20px; /* Adjusted padding for better appearance */
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+}
+#main-content a {
+    padding: 5px 20px; /* Adjusted padding for better appearance */
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+}
+#menu-sidebar a:hover {
+    background-color: #34495e;
+}
+
+#main-content {
+    margin-left: 350px; /* Adjusted margin to match the toggle logic */
+    padding: 25px; /* Added 'px' unit for padding */
+    transition: margin-left 1.5s;
+
+
+}
+
+#menu-btn {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 40px;
+    color: #000000;
+    z-index: 1;
+}
+
+#menu-btn:hover {
+    color: #3498db;
+}
+
+#yin-yang {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    background: #fff;
+    display: inline-block;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+#yin-yang:before,
+#yin-yang:after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: #000;
+    border-radius: 50%;
+}
+
+#yin-yang:before {
+    left: 50%;
+}
+
+#yin-yang:after {
+    left: 50%;
+}
+
+button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Terminal, sans-serif;
+    margin-left: 25px; /* Adjusted margin to match the toggle logic */
+    padding: 25px; /* Added 'px' unit for padding */
+    transition: margin-left 1.5s;
+}
+#col{
+    color: #000000;
+    font-size: 20px;
+    font-family: Terminal, sans-serif;
+    margin-top: 65px; /* Adjusted margin to match the toggle logic */
+    padding: 25px; /* Added 'px' unit for padding */
+    transition: margin-left 1.5s;
+}
