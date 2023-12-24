@@ -41,16 +41,32 @@
     }
 
     #vim-header {
-      background-color: #3e4451;
+      background-color: #1d293f;
       padding: 10px;
       text-align: center;
       color: #61afef;
       font-size: 18px;
     }
-
+    #vim-header-sub-main {
+        display: flex;
+    }
+    #vim-header-sub1 {
+        flex: 0 0 25%; 
+        font-size: 12px;
+        text-align: center;        
+    }
+    #vim-header-sub2 {
+        background-color: #424945;
+        flex: 1;
+        text-align: right;
+    }
+    #vim-header-sub3 {
+        background-color: #232323;
+        flex: 0 0 5%;
+        text-align: center;
+    }
     #vim-content {
       padding: 20px;
-      white-space: pre-wrap;
       counter-reset: line-number;
       flex: 1;
       overflow-y: auto;
@@ -60,14 +76,29 @@
       margin: 0;
     }
 
-    #vim-footer {
-      background-color: #3e4451;
-      padding: 10px;
-      text-align: right;
-      color: #61afef;
-      font-size: 14px;
+    #vim-footer-sub-main {
+        display: flex;
     }
-
+    #vim-footer-sub1 {
+        flex: 0 0 25%; 
+        background-color: #61afef;
+        color: #1e2228;
+        font-size: 14px;
+        text-align:center;
+    }
+    #vim-footer-sub2 {
+        background-color: #424945;
+        flex: 1;
+        text-align: left;
+        font-size: small;
+        padding-left: 20px;
+    }
+    #vim-footer-sub3 {
+        color: black;
+        background-color: #61afef;
+        flex: 0 0 5%;
+        text-align: center;
+    }
     #terminal {
       flex: 1;
       overflow: hidden;

@@ -68,6 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
   setInterval(function() {
     const currentTime = new Date().toLocaleTimeString();
-    const statusText = `NORMAL   vim_terminal   [No Name]   +                                                    ${currentTime}     1:0`;
+    const statusText = ` ${currentTime} `;
     statusLine.textContent = statusText;
   }, 1000); // Update every second
