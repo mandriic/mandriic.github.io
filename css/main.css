@@ -100,7 +100,7 @@
         text-align: center;
     }
     #terminal {
-      flex: 1;
+      flex: 0 0 30%;
       overflow: hidden;
       padding: 20px;
       display: flex;
