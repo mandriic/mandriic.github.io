@@ -19,8 +19,9 @@
         <!-- <div id="vim-header-3"></div> -->
     <div id="vim-content">
       <pre>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYiUTcsYBl9uVx7M6Ew2Zxi8nbzdurq7GjfbN9UVlf45eflF80aXqTVRgaKsO4U0-7UfSTb_bjkWfx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1492" height="2140" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="cv.pdf" frameborder="0" width="100%" height="1000lh" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </pre>
+        <button onclick="downloadPDF()">Download PDF</button>
         </div>
     <div id="vim-footer-sub-main">  
 
@@ -30,5 +31,12 @@
         <div id="vim-footer-sub3">1:1</div>
     </div>
     </div>
+    <script>
+      function downloadPDF() {
+        // Replace '[your-pdf-file.pdf]' with the actual name of your PDF file
+        window.open('cv.pdf', '_blank');
+      }
+    </script>
 </body>
+
 </html>
