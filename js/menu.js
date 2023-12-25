@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: 'Home.txt', link: 'index.html' },
       { name: 'About.txt', link: 'about.html' },
       { name: 'Contact.txt', link: 'contact.html' },
-      { name: 'Skills.txt', link: 'skills.html' }
+      { name: 'Skills.txt', link: 'skills.html' },
+      { name: 'CV.pdf', link: 'cv.html' }
       // Add more pages as needed
     ];
   
