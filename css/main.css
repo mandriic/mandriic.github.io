@@ -147,3 +147,24 @@
       padding: 5px 10px;
       cursor: pointer;
     }
+    @media only screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+    
+      nav ul {
+        flex-direction: column;
+      }
+    
+      nav li {
+        margin-bottom: 10px;
+      }
+    
+      main p {
+        font-size: 0.9em;
+      }
+    
+      iframe {
+        height: 300px; /* Adjust the height as needed for mobile devices */
+      }
+    }
