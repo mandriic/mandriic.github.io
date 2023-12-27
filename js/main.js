@@ -27,7 +27,7 @@
             appendToOutput(textToEcho + '\n');
             break;
           case 'ls':
-            appendToOutput('file1.txt  file2.txt  file3.txt\n');
+            appendToOutput('Home.txt About.txt Contact.txt Skills.txt CV.pdf\n');
             break;
           case 'pwd':
             appendToOutput(terminalLine);
