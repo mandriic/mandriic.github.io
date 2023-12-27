@@ -170,3 +170,7 @@
         height: 300px; /* Adjust the height as needed for mobile devices */
       }
     }
+    .badge {
+      display: inline-block;
+      margin: 4px;
+  }
