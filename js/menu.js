@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
   titleButton.addEventListener('click', function () {
     menuContainer.style.display = (menuContainer.style.display === 'none' || menuContainer.style.display === '') ? 'block' : 'none';
     titleButton.style.color = "#61afef";
+    if (titleButton.innerHTML == "+"){
+      titleButton.innerHTML = 'EXPLORER HIDE';
+    }else{
+      titleButton.innerHTML = "+";
+    }
+    
 });
 
 
