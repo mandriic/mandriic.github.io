@@ -35,6 +35,9 @@
           case 'cat':
             const fileName = commandParts.slice(1).join(' ').trim(); // Join the rest of the parts as the filename
             if (fileName) {
+              if (fileName){
+                window.alert("You can read " + fileName + " in index.html")
+              }
               // You can implement file reading logic here
               // For simplicity, we'll just return a placeholder text
               appendToOutput(`Content of ${fileName}:\nThis is the content of ${fileName}\n`);

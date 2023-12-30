@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add an event listener to toggle the menu visibility
   titleButton.addEventListener('click', function () {
     menuContainer.style.display = (menuContainer.style.display === 'none' || menuContainer.style.display === '') ? 'block' : 'none';
+
     titleButton.style.color = "#61afef";
     if (titleButton.innerHTML == "+"){
       titleButton.innerHTML = 'EXPLORER HIDE';
+    menuContainer.style.transition = "1s";
+
     }else{
       titleButton.innerHTML = "+";
     }
