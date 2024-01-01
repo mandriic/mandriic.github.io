@@ -30,11 +30,21 @@ document.addEventListener('DOMContentLoaded', function () {
   menuContainer.style.paddingTop = '50px';
   menuContainer.style.boxSizing = 'border-box';
   menuContainer.style.overflowY = 'auto';
-  menuContainer.style.display = 'block'; // Ensure the menu is initially visible
+  // menuContainer.style.display = 'block'; // Ensure the menu is initially visible
   // Add an event listener to toggle the menu visibility
   titleButton.addEventListener('click', function () {
-    menuContainer.style.display = (menuContainer.style.display === 'none' || menuContainer.style.display === '') ? 'block' : 'none';
-
+    menuContainer.style.transition = "1s";
+    // menuContainer.style.display = (menuContainer.style.display === 'none' || menuContainer.style.display === '') ? 'block' : 'none';
+    if (menuContainer.style.width == '0px'){
+      menuContainer.style.width = '200px';
+      menuContainer.style.paddingLeft = '15px';
+      menuContainer.style.paddingRight = '15px';
+    }
+    else{
+      menuContainer.style.width = '0px';
+      menuContainer.style.paddingLeft = '0px';
+      menuContainer.style.paddingRight = '0px';
+    }
     titleButton.style.color = "#61afef";
     if (titleButton.innerHTML == "+"){
       titleButton.innerHTML = 'EXPLORER HIDE';
@@ -43,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }else{
       titleButton.innerHTML = "+";
     }
-    
 });
 
 
