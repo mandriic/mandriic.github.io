@@ -1,12 +1,13 @@
   // Create and append the title button
   const titleButton = document.createElement('button');
   titleButton.textContent = 'EXPLORER hide/show';
-  titleButton.style.color = '#61afef';
+  titleButton.style.color = '#000000';
   titleButton.style.textAlign = 'center';
   titleButton.style.marginBottom = '15px';
-  titleButton.style.backgroundColor = '#1e2228';
+  titleButton.style.backgroundColor = '#61afef';
   titleButton.style.border = 'none';
   titleButton.style.cursor = 'pointer';
+  titleButton.style.borderRadius = '8px';
 
 document.addEventListener('DOMContentLoaded', function () {
   const divForButton = document.createElement('div');
@@ -45,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
       menuContainer.style.paddingLeft = '0px';
       menuContainer.style.paddingRight = '0px';
     }
-    titleButton.style.color = "#61afef";
     if (titleButton.innerHTML == "+"){
       titleButton.innerHTML = 'EXPLORER HIDE';
     menuContainer.style.transition = "1s";
@@ -112,3 +112,5 @@ setInterval(function() {
   const statusText = ` ${currentTime} `;
   statusLine.textContent = statusText;
 }, 1000); // Update every second
+
+

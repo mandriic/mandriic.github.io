@@ -36,7 +36,7 @@
             const fileName = commandParts.slice(1).join(' ').trim(); // Join the rest of the parts as the filename
             if (fileName) {
               if (fileName){
-                window.alert("You can read " + fileName + " in index.html")
+                window.alert("You can read " + fileName + " in index.html. Temporary this funcion not work because In JavaScript, you can't directly open files on a user's machine due to security restrictions in modern web browsers")
               }
               // You can implement file reading logic here
               // For simplicity, we'll just return a placeholder text
@@ -79,3 +79,20 @@
 
       inputElement.focus();
     });
+    function openDivsWithDelay() {
+      const boxes = document.querySelectorAll('.box');
+    
+      function openBox(index) {
+          if (index < boxes.length) {
+              boxes[index].style.opacity = '1';
+              setTimeout(() => {
+                  openBox(index + 1);
+              }, 100); // Delay of 1 second (1000 milliseconds)
+          }
+      }
+    
+      openBox(0);
+    }
+    
+    // Call the function when the page is loaded
+    window.onload = openDivsWithDelay;

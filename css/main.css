@@ -174,4 +174,8 @@
       display: inline-block;
       margin: 4px;
   }
-  
+  .box {
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition over 1 second */
+}
