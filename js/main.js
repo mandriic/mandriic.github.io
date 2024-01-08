@@ -16,8 +16,12 @@
 
         switch (commandName) {
           case 'help':
-            appendToOutput('Available commands:\n- help\n- date\n- echo\n- ls\n- cat <filename>\n- pwd\n');
+            appendToOutput('Available commands:\n- help\n- date\n- echo\n- ls\n- cat <filename>\n- pwd\n- exit\n');
             break;
+          case 'exit':
+              appendToOutput('exit');
+              document.getElementById("terminal").style.display = "none";
+              break;
           case 'date':
             const currentDate = new Date().toLocaleString();
             appendToOutput(currentDate + '\n');
