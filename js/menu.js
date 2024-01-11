@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
     { name: 'About.txt', link: 'about.html' },
     { name: 'Contact.txt', link: 'contact.html' },
     { name: 'Skills.txt', link: 'skills.html' },
-    { name: 'CV.pdf', link: 'cv.html' }
+    { name: 'CV.pdf', link: 'cv.html' },
+    { name: 'Game', link: 'snake.html' }
     // Add more pages as needed
   ];
 
