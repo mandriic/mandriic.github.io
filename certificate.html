@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/main.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV Page</title>
+  <script defer src="js/menu.js"></script>
+</head>
+<body>
+<div id="menu-container"></div>
+  <div id="vim-container">
+    <!-- <div id="vim-header">Vim-like HTML</div> -->
+    <div id="vim-header-sub-main">  
+        <div id="vim-header-sub1"> 1 [cv.pdf] +</div>
+        <div id="vim-header-sub2"></div>
+        <div id="vim-header-sub3">X</div>
+    </div>
+        <!-- <div id="vim-header-3"></div> -->
+    <div id="vim-content">
+      <pre>
+<iframe src="Merged.pdf" frameborder="0" width="100%" height="1000lh" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </pre>
+        <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+    <div id="vim-footer-sub-main">  
+
+        <div id="vim-footer-sub1"> NORMAL</div>
+        <div id="vim-footer-sub2"> vim_terminal certeficate.pdf Mykola Andriichuk</div>
+        <div id="statusLine"></div>
+        <div id="vim-footer-sub3">1:1</div>
+    </div>
+    </div>
+    <script>
+      function downloadPDF() {
+        // Replace '[your-pdf-file.pdf]' with the actual name of your PDF file
+        window.open('Merged.pdf', '_blank');
+      }
+    </script>
+</body>
+
+</html>
