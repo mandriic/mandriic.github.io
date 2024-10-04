@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { name: 'CV.pdf', link: 'cv.html' },
     { name: 'Certificate.pdf', link: 'certificate.html' },
     { name: 'Examples.html', link: 'examples.html' },
+    { name: 'AI bot.html', link: 'bot.html' },
 
     //{ name: 'Game', link: 'snake.html' }
     // Add more pages as needed

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Generator</title>
+</head>
+<body>
+    <h1>Story Generator</h1>
+    <form id="storyForm">
+        <label for="quest">What do you want to write about?</label><br>
+        <input type="text" id="quest" name="quest" required><br><br>
+        <input type="submit" value="Generate Story">
+    </form>
+    <h2>Generated Story:</h2>
+    <p id="storyOutput"></p>
+
+    <script>
+        document.getElementById('storyForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const quest = document.getElementById('quest').value;
+
+            const response = await fetch('https://1f31f094-8bc8-4b3c-89a9-8158702a91b5-00-2finplftrnn6v.janeway.replit.dev/generate', { // Replace with your Replit URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ quest }),
+            });
+
+            const data = await response.json();
+            document.getElementById('storyOutput').innerText = data.story;
+        });
+    </script>
+</body>
+</html>
