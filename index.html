@@ -22,8 +22,8 @@
     document.body.appendChild(renderer.domElement);
 
     // Освітлення
-    const light = new THREE.DirectionalLight(0xffffff, 10);
-    light.position.set(1, 1, 1).normalize();
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 5, 1).normalize();
     scene.add(light);
 
     // Контролери орбіти
@@ -33,12 +33,25 @@
 
     // Завантаження моделі
     const loader = new THREE.GLTFLoader();
-    loader.load('./3dobj/pixelMixeer.gltf', function(gltf) {
-      scene.add(gltf.scene);
-      gltf.scene.position.set(0, -1, 0); // Розміщення моделі
-    });
-
-    // Камера
+    loader.load(
+  'pixelMixeer.gltf',
+  function(gltf) {
+    scene.add(gltf.scene);
+    gltf.scene.position.set(0, -1, 0);
+  },
+  undefined,
+  function(error) {
+    console.error('Error loading model:', error);
+  }
+);
+// fetch('./tdobj/pixelMixeer.gltf')
+//   .then((response) => {
+//     if (!response.ok) throw new Error('Network response was not ok');
+//     console.log('GLTF loaded successfully:', response);
+//     return response.json();
+//   })
+//   .catch((error) => console.error('There was a problem with the fetch operation:', error));
+//     // Камера
     camera.position.set(0, 1, 5); // Змінена початкова позиція камери
 
     // Анімація
