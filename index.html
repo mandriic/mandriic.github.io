@@ -23,9 +23,14 @@
 
     // Освітлення
     const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(1, 5, 1).normalize();
+    light.position.set(0, 10, 0).normalize();
     scene.add(light);
-
+    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1); // Червоне світло
+    directionalLight2.position.set(-10, 10, 5); // Позиція джерела світла
+    scene.add(directionalLight2);
+    const directionalLight3 = new THREE.DirectionalLight(0xffffff, 1); // Червоне світло
+    directionalLight2.position.set(20, 20, 30); // Позиція джерела світла
+    scene.add(directionalLight2);
     // Контролери орбіти
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true; // Додавання інерції
@@ -37,7 +42,7 @@
   'pixelMixeer.gltf',
   function(gltf) {
     scene.add(gltf.scene);
-    gltf.scene.position.set(0, -1, 0);
+    gltf.scene.position.set(0, 0, 0);
   },
   undefined,
   function(error) {
@@ -52,7 +57,7 @@
 //   })
 //   .catch((error) => console.error('There was a problem with the fetch operation:', error));
 //     // Камера
-    camera.position.set(0, 1, 5); // Змінена початкова позиція камери
+    camera.position.set(20, 5, 0); // Змінена початкова позиція камери
 
     // Анімація
     function animate() {
