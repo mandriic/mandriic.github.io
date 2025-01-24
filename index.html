@@ -33,8 +33,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.body.appendChild(renderer.domElement);
 
     // Освітлення
+    const lightAmbient = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(lightAmbient);
+
+    
+
     const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(0, 10, 0).normalize();
+    light.position.set(0, 0, 0); // Позиція джерела світ
     scene.add(light);
     const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1); // Червоне світло
     directionalLight2.position.set(-10, 10, 5); // Позиція джерела світла
@@ -58,6 +63,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   undefined,
   function(error) {
     console.error('Error loading model:', error);
+  }
+);
+
+const loader2 = new THREE.GLTFLoader();
+loader2.load(
+  'ANIMATEDQR.gltf', // Шлях до вашої моделі
+  (gltf) => {
+    const model = gltf.scene; // Основна сцена моделі
+    // маштабування моделі
+    model.scale.set(0.5, 0.5, 0.5);
+    gltf.scene.position.set(0, -5, 10);
+    // gltf.scene.position.set(10, 5, 10);
+    //обертання моделі
+    model.rotation.x = 90 * (Math.PI / 180);
+    // model.rotation.z = 180 * (Math.PI / 180);
+    scene.add(model);
+
+    // Анімаційний міксер
+    const mixer = new THREE.AnimationMixer(model);
+    gltf.animations.forEach((clip) => {
+      mixer.clipAction(clip).play(); // Запуск всіх анімацій
+    });
+
+    // Додавання міксера до оновлення
+    const clock = new THREE.Clock();
+
+    // Анімаційний цикл
+    function animate() {
+      requestAnimationFrame(animate);
+      const delta = clock.getDelta();
+      mixer.update(delta); // Оновлення анімації
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  },
+  (xhr) => {
+    console.log(`Завантажено ${(xhr.loaded / xhr.total) * 100}% моделі.`);
+  },
+  (error) => {
+    console.error('Помилка завантаження моделі:', error);
   }
 );
 // fetch('./tdobj/pixelMixeer.gltf')
